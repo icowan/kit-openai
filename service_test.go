@@ -16,7 +16,7 @@ import (
 )
 
 func initSvc() Service {
-	return New("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", []kithttp.ClientOption{
+	return New("", []kithttp.ClientOption{
 		kithttp.ClientBefore(func(ctx context.Context, request *http.Request) context.Context {
 			dump, err := httputil.DumpRequest(request, true)
 			if err != nil {
